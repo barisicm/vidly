@@ -1,0 +1,30 @@
+﻿@using Vidly.Controllers
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary" style="">
+    <div class="container">
+        @Html.ActionLink("Vidly", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="navbar-nav">
+                    @Html.ActionLink(
+                        "Customers",
+                        "Index",
+                        "Customers",
+                        new { area = "" },
+                        new { @class = "nav-item nav-link" })
+                    
+
+                    @Html.ActionLink(
+                        "Movies",
+                        "Index",
+                        "Movies",
+                        new { area = "" },
+                        new { @class = "nav-item nav-link" })
+            </div>
+            <ul class="nav navbar-nav ml-auto">
+                
+            </ul>
+        </div>
+    </div>
+</div>

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using Vidly.Models;
+using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
@@ -13,12 +15,19 @@ namespace Vidly.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() {Name = "Shrek!"};
+            var customers = new List<Customer>
+            {
+                new Customer { Name = "Customer 1" },
+                new Customer { Name = "Customer 2"}
+            };
 
-//            return View(movie);
-//            return Content("Hello World!");
-//            return HttpNotFound();
-            //return new EmptyResult();
-            return RedirectToAction("Index", "Home", new {page = 1, sortBy = "name"});
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
+
+            return View(viewModel);
         }
 
         public ActionResult Edit(int id)
@@ -27,15 +36,20 @@ namespace Vidly.Controllers
         }
 
         //movies
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Index()
         {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
+            var movies = new List<Movie>
+            {
+                new Movie { Id = 1, Name = "Shrek"},
+                new Movie { Id = 2, Name = "Wall-E"}
+            };
 
-            if (String.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
+            var viewModel = new MoviesViewModel
+            {
+                Movies = movies
+            };
 
-            return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+            return View(viewModel);
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1, 12)}")]
