@@ -4,17 +4,39 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Movies</h2>
-<ul>
-    @foreach (var Movie in Model)
-    {
-        <li>
-            @Html.ActionLink(
-                Movie.Name,
-                "Details",
-                "Movies",
-                new { id = Movie.Id },
-                null)
-        </li>
-    }
-</ul>
+
+
+@if (!Model.Any())
+{
+    <p>We don't have any customers yet.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var Movie in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(
+                        Movie.Name,
+                        "Details",
+                        "Movies",
+                        new { id = Movie.Id },
+                        null)
+                </td>
+                <td>
+                    @Movie.Genre.Name
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+}

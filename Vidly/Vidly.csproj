@@ -173,9 +173,38 @@
     <Compile Include="Migrations\201902211250255_UpdateMembershipTypeNames.Designer.cs">
       <DependentUpon>201902211250255_UpdateMembershipTypeNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902261240441_Added birthdate to customers.cs" />
+    <Compile Include="Migrations\201902261240441_Added birthdate to customers.Designer.cs">
+      <DependentUpon>201902261240441_Added birthdate to customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902261249382_Added nullable BirthDate.cs" />
+    <Compile Include="Migrations\201902261249382_Added nullable BirthDate.Designer.cs">
+      <DependentUpon>201902261249382_Added nullable BirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902261423426_Added genre model class.cs" />
+    <Compile Include="Migrations\201902261423426_Added genre model class.Designer.cs">
+      <DependentUpon>201902261423426_Added genre model class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902261427200_Added genre model class2.cs" />
+    <Compile Include="Migrations\201902261427200_Added genre model class2.Designer.cs">
+      <DependentUpon>201902261427200_Added genre model class2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902261427568_insert new values into genre table.cs" />
+    <Compile Include="Migrations\201902261427568_insert new values into genre table.Designer.cs">
+      <DependentUpon>201902261427568_insert new values into genre table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902261439398_add aditional info to movies class.cs" />
+    <Compile Include="Migrations\201902261439398_add aditional info to movies class.Designer.cs">
+      <DependentUpon>201902261439398_add aditional info to movies class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902261508360_added required annotation to movie properties.cs" />
+    <Compile Include="Migrations\201902261508360_added required annotation to movie properties.Designer.cs">
+      <DependentUpon>201902261508360_added required annotation to movie properties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -298,6 +327,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902211250255_UpdateMembershipTypeNames.resx">
       <DependentUpon>201902211250255_UpdateMembershipTypeNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261240441_Added birthdate to customers.resx">
+      <DependentUpon>201902261240441_Added birthdate to customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261249382_Added nullable BirthDate.resx">
+      <DependentUpon>201902261249382_Added nullable BirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261423426_Added genre model class.resx">
+      <DependentUpon>201902261423426_Added genre model class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261427200_Added genre model class2.resx">
+      <DependentUpon>201902261427200_Added genre model class2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261427568_insert new values into genre table.resx">
+      <DependentUpon>201902261427568_insert new values into genre table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261439398_add aditional info to movies class.resx">
+      <DependentUpon>201902261439398_add aditional info to movies class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902261508360_added required annotation to movie properties.resx">
+      <DependentUpon>201902261508360_added required annotation to movie properties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
